@@ -1,0 +1,245 @@
+.blog-card {
+    background-color: rgba(78, 77, 77, 0.5);
+
+    border-radius: 25px;
+    transition: ease-in-out 0.7s;
+
+    color: #7a7979;
+
+    width: 100% !important;
+
+    padding: 0;
+    padding-inline: 0.5em;
+    margin-top: 5em;
+    padding-left: 0;
+
+}
+
+
+.blog-card .blog-img {
+   
+   
+    padding: 0.2em;
+    width: 95%;
+    box-shadow: -5px 8px 10px 0px #1a1919;
+    border-radius: 25px;
+    padding-right:0 ;
+    
+    
+    
+    
+
+}
+
+
+.blog-card .card-text{
+    color: #b1b1b1;
+    padding-inline: 1em;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.blog-card .form-control-comment{
+    background-color: rgb(30, 30, 30);
+    border-radius: 25px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #525252;
+    width: 75%;
+    padding: 1em;
+    color: #fff;
+}
+
+.blog-card .blog-img-background{
+    position: relative;
+    padding: 0;
+    background-color: linear-gradient(90deg, #ff0000 0%, #ffffff 100%);
+    width: 33%;
+    
+    opacity: 0.4 ;
+    
+}
+
+.blog-card .airplane{
+    width:60px;
+    scale:0.8;
+    opacity: 0.6;
+    
+    position: absolute;
+}
+
+.blog-card .airplane:hover{
+    opacity: 1;
+    
+}
+
+
+.blog-card .author {
+    padding-top: 1em ;
+    color: #b1b1b1;
+    display: flex;
+    padding-inline: 5em;
+    background-color: transparent 50%;
+    padding-inline: 1em;
+    font-size: 1.5em;
+    margin: 0.5em 0;
+    
+}
+
+.blog-card .card-title {
+    color: #fff;
+    display: flex;
+    font-weight: 600;
+    padding-inline: 1em;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0.5em 0;
+    margin-top: 2em;
+}
+
+.blog-card .comment-container {
+    display: flex;
+    
+    
+    padding: 1em;
+    color: #fff;
+}
+
+.blog-card .comment-container .comments {
+    display: flex;
+    flex-direction: column;
+    /* padding: 1em; */
+    color: #fff;
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    border-radius: 25px;
+    max-height: 300px; /* Максимальная высота для скролла */
+    overflow-y: hidden; /* Скрыть скролл по умолчанию */
+    transition: overflow-y 0.3s ease; 
+}
+
+.blog-card .comment-container .comments .show{
+    overflow-y: auto;
+}
+
+.blog-card .comment-container .comments .comment-block {
+        
+        padding: 10px 0;
+    }
+
+.blog-card .comment-container .comments .comment {
+    display: flex;
+    flex-direction: column;
+    /* padding: 1em; */
+    color: #fff;
+    width: 100%;
+    background-color: rgb(65, 65, 65);
+    border-radius: 25px;
+}
+
+
+.blog-card .comment-container .comment-form {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    color: #fff;
+    width: 100%;
+}
+
+/* .blog-card .comments .accordion-flush {
+    background-color: rgb(30, 30, 30);
+    border-radius: 25px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #525252;
+    width: 100%;
+    padding: 1em;
+    color: #fff;
+
+} */
+
+.blog-card .comments .accordion-flush .accordion-button {
+    background-color: rgb(65, 65, 65);
+    
+    /* border-width: 0.5px;
+    border-style: solid;
+    border-color: #525252; */
+    width: 100%;
+    padding: 1em;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.blog-card .comments .accordion-flush .accordion-body{
+    background-color: rgb(65, 65, 65);
+    
+    /* border-width: 0.5px;
+    border-style: solid;
+    border-color: #525252; */
+    width: 100%;
+    padding: 1em;
+    color: #fff;
+} 
+
+.blog-card .comments .accordion-flush .accordion-item{
+    background-color: rgb(65, 65, 65);
+    
+    /* border-width: 0.5px;
+    border-style: solid;
+    border-color: #525252; */
+    width: 100%;
+    padding: 1em;
+    color: #fff;
+    margin-bottom: 0;
+    border-radius: 25px;
+}
+
+
+.blog-card .comments .accordion-flush .accordion-item .comment-user {
+    display: inline;
+    
+}
+
+.blog-card .comments .accordion-flush .accordion-item .login-user,
+.blog-card .comments .accordion-flush .accordion-item .comment-date {
+    color: #b1b1b1;
+    display: inline !important;
+    width: 25%;
+    padding-right: 2em;
+    
+    
+    
+   
+}
+
+
+.card-body .scrollspy-example .p{
+    font-size: 2em;
+}
+
+
+.scrollspy-example {
+            padding: 1em;
+            height: 400px;
+            overflow-y: scroll;
+            scrollbar-width: medium; /* Firefox */
+            scrollbar-color: #555 #222; /* Firefox */
+        }
+
+        .scrollspy-example::-webkit-scrollbar {
+            width: 3em; /* Ширина скроллбара */
+        }
+
+        .scrollspy-example::-webkit-scrollbar-track {
+            background: #222; /* Цвет фона скроллбара */
+            
+        }
+
+        .scrollspy-example::-webkit-scrollbar-thumb {
+            background-color: #555; /* Цвет ползунка скроллбара */
+           
+        }
+
+        .scrollspy-example::-webkit-scrollbar-thumb:hover {
+            background-color: #777; /* Цвет ползунка при наведении */
+        }

@@ -1,0 +1,25 @@
+
+
+.card{
+    margin-top: 6em;
+    margin-bottom: 10em;
+    background-color:  rgba(78, 77, 77, 0.5); 
+    color:#fff  ;
+    border-radius: 25px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #fff;
+    width: 100%;
+}
+
+
+.card-body{
+    background-color:  rgba(78, 77, 77, 0.5); 
+    color:#fff  ;
+    border-radius: 25px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #fff;
+    width: 100%;
+    padding: 2em;
+}

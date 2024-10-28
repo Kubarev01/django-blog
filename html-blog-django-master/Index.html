@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/5.15.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+    <title>Главная</title>
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/carousel.css" />
+    <link rel="stylesheet" type="text/css" href="./css/footer.css" />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="container overflow-hidden  text-center mt-5 main-nav-bar">
+            <div class="row gy-3">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <nav class="navbar bg-dark border-bottom border-body " data-bs-theme="dark">
+                        <div class="container-fluid ">
+
+                            <ul class="nav justify-content-evenly w-100">
+                                <li class="nav-item brand-title " style=" font-size: 18px;">
+                                    black+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="Index.html">Главная</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about-us.html">О нас</a>
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="profile.html">Мой блог</a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a class="nav-link" href="auth.html">Войти</a>
+                                </li>
+
+                                <!-- <button class="btn btn-outline-light signUpButton" type="button">Войти</button>
+                            </ul> -->
+
+                                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                    aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                                    aria-labelledby="offcanvasNavbarLabel">
+                                    <div class="offcanvas-header">
+
+                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="navbar-nav justify-content-start  pe-3">
+                                            <li class="nav-item">
+                                                <a class="nav-link   py-3 active-offset" aria-current="page"
+                                                    href="#">Главная</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  py-3" href="#">О нас</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  py-3" href="#">В тренде</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  py-3" href="#">Мой блог</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link  py-3" href="#">Войти</a>
+                                            </li>
+
+
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-2"></div>
+            </div>
+
+            <div class="img-container">
+                <div class="img-text start-50 top-50 translate-middle-x">
+                    <h2 class="img-title">Newsroom</h2>
+                    <p class="img-subtitle">Новости и заметки от ведущих веб-инженеров...</p>
+                </div>
+                <div class="img-content">
+                    <img src="assets/circle.png">
+                </div>
+
+            </div>
+
+
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container overflow-hidden mt-5 ">
+            <div class="row gy-3  ">
+                <!-- <div class="col-1"></div> -->
+                <div class="col-12 parent-carousel">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Предыдущий</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Следующий</span>
+                            </button>
+                            <div class="carousel-item active">
+
+                                <div class="d-block w-100 ">
+                                    <div class="row">
+                                        <div class="col-lg-6 text-slide">
+                                            Insight
+                                            <h2 class="insightTitle">Behind our industry leading acceptance rates</h2>
+                                            <h3 class="insightSubtitle">
+                                                CloudCannon, a popular Git-based CMS for
+                                                static site generators, has annouced full
+                                                support for Astro.
+                                            </h3>
+
+
+                                            <div>
+                                                <a href="#" class="carousel-link w-100">
+                                                    <p>Узнать больше>>></p>
+                                                </a>
+                                            </div>
+
+
+                                            <p class="insightDate">March 18, 2024</p>
+
+                                            <h2 align="right">
+                                                <i>By Mr.Sneakers</i>
+                                            </h2>
+
+
+                                        </div>
+                                        <div class="col-lg-6 image-parent">
+                                            <img class="insightImage" src="./assets/preview3.svg" alt="alt text" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item ">
+
+                                <div class="d-block w-100 ">
+                                    <div class="row">
+                                        <div class="col-lg-6 text-slide">
+                                            Insight
+                                            <h2 class="insightTitle">Behind our industry leading acceptance rates</h2>
+                                            <h3 class="insightSubtitle">
+                                                CloudCannon, a popular Git-based CMS for
+                                                static site generators, has annouced full
+                                                support for Astro.
+                                            </h3>
+
+
+                                            <div>
+                                                <a href="#" class="carousel-link w-100">
+                                                    <p>Узнать больше>>></p>
+                                                </a>
+                                            </div>
+
+
+                                            <p class="insightDate">March 18, 2024</p>
+
+                                            <h2 align="right">
+                                                <i>By Mr.Sneakers</i>
+                                            </h2>
+
+
+                                        </div>
+                                        <div class="col-lg-6 image-parent">
+                                            <img class="insightImage" src="./assets/preview3.svg" alt="alt text" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+
+                                <div class="d-block w-100 ">
+                                    <div class="row">
+                                        <div class="col-lg-6 text-slide">
+                                            Insight
+                                            <h2 class="insightTitle">Behind our industry leading acceptance rates</h2>
+                                            <h3 class="insightSubtitle">
+                                                CloudCannon, a popular Git-based CMS for
+                                                static site generators, has annouced full
+                                                support for Astro.
+                                            </h3>
+
+
+                                            <div>
+                                                <a href="#" class="carousel-link w-100">
+                                                    <p>Узнать больше>>></p>
+                                                </a>
+                                            </div>
+
+
+                                            <p class="insightDate">March 18, 2024</p>
+
+                                            <h2 align="right">
+                                                <i>By Mr.Sneakers</i>
+                                            </h2>
+
+
+                                        </div>
+                                        <div class="col-lg-6 image-parent">
+                                            <img class="insightImage" src="./assets/preview3.svg" alt="alt text" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="row w-100">
+
+                <div class="col-12">
+
+
+
+
+                    <div class="card subscriptionContainer">
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="con">
+                                            <label for="exampleInputEmail1" class="form-label">Подпишитесь,<br> чтобы
+                                                оставаться в курсе</label>
+
+                                            <div class="email-sub-group position-relative">
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="Ваша электронная почта">
+                                                <button type="submit"
+                                                    class="btn btn-primary email-sub-btn ">Отправить</button>
+                                            </div>
+                                            <br>
+                                            <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу
+                                                электронную почту.
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-3 align-items-center justify-content-evenly">
+                                <div class="follow-us">
+                                    <h3 class="follow-us-title">:)</h3>
+                                    <br>
+                                    <p>Получите последние новости и вдохновение</p>
+                                    <br>
+                                    <a href="#">
+                                        <img class="twitter" src="./assets/twiter.svg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="inst" src="./assets/inst.svg" alt="">
+                                    </a>
+                                    <a href="#">
+                                        <img class="youtube" src="./assets/youtube.svg" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="container-fluid w-100">
+            <div class="container grid-blogs ">
+                <div class="card-base">
+                    <a href="#">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/preview1.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-date mb-2">Insight March 17, 2024</p>
+                                <h5 class="card-title mb-2">Bole of Desing in Masing
+                                    User-Friendly Apps</h5>
+                                <p class="card-text">Небольшой пример текста, который должен основываться на названии
+                                    карточки и составлять
+                                    основную часть содержимого карты.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-base">
+                    <a href="#">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/preview2.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-date mb-2">Insight March 17, 2024</p>
+                                <h5 class="card-title mb-2">Bole of Desing in Masing
+                                    User-Friendly Apps</h5>
+                                <p class="card-text">Небольшой пример текста, который должен основываться на названии
+                                    карточки и
+                                    составлять
+                                    основную часть содержимого карты.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-base">
+                    <a href="#">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/preview5.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-date mb-2">Insight March 17, 2024</p>
+                                <h5 class="card-title mb-2">Bole of Desing in Masing
+                                    User-Friendly Apps</h5>
+                                <p class="card-text">Небольшой пример текста, который должен основываться на названии
+                                    карточки и
+                                    составлять
+                                    основную часть содержимого карты.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-base">
+                    <a href="#">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/preview4.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-date mb-2">Insight March 17, 2024</p>
+                                <h5 class="card-title mb-2">Bole of Desing in Masing
+                                    User-Friendly Apps</h5>
+                                <p class="card-text">Небольшой пример текста, который должен основываться на названии
+                                    карточки и
+                                    составлять
+                                    основную часть содержимого карты.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-base">
+                    <a href="#">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/preview5.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-date mb-2">Insight March 17, 2024</p>
+                                <h5 class="card-title mb-2">Bole of Desing in Masing
+                                    User-Friendly Apps</h5>
+                                <p class="card-text">Небольшой пример текста, который должен основываться на названии
+                                    карточки и
+                                    составлять
+                                    основную часть содержимого карты.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="card-base">
+                    <a href="#">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/preview1.svg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-date mb-2">Insight March 17, 2024</p>
+                                <h5 class="card-title mb-2">Bole of Desing in Masing
+                                    User-Friendly Apps</h5>
+                                <p class="card-text">Небольшой пример текста, который должен основываться на названии
+                                    карточки и
+                                    составлять
+                                    основную часть содержимого карты.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link selected" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+
+
+
+        </div>
+
+        </div>
+
+
+        </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase-logo">Black+</h5>
+                    <br>
+                    <p class="rights-text">
+                        All rights reserved 2024
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="footer-link">vacancy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">abuse</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">connect us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Find us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="footer-link">Telegram</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- Footer -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
