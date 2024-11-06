@@ -1,0 +1,31 @@
+
+
+
+services:
+  db:
+    image: postgres:15
+    restart: always
+    container_name: black_postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./tmp/cache:/tmp
+    environment:
+      - DEBUG=True
+    restart: always
+    container_name: black_app
+    depends_on:
+      - db
+    command: sh -c "python manage.py makemigrations &&
+                     python manage.py migrate &&
+                     python manage.py runserver 0.0.0.0:8000 --noreload"

@@ -38,7 +38,7 @@
 
                                 <img src={{post.image.url}} class="img-fluid rounded-start blog-img" alt="...">
                                 <h5 class="card-title">{{post.title}}</h5>
-                                <p class="author">@mr.Sneakers</p>
+                                <p class="author">{{post.made_by.username}}</p>
                                 <p class="description" style="color: #d8d7d7; padding: 1.5em;">{{post.description|truncatechars:155}}</p>
                             </div>
                             </img>
@@ -61,11 +61,14 @@
                                 </div>
                                 <div class="comment-container">
                                     <div class="comment-form">
-                                        <form>
+                                        <form action="{% url "comments:leave_a_comment" post.slug %}" id="commentForm" method='POST'>
+                                            {% csrf_token %}
+                                            {% if form.errors %}<div class="alert alert-warning" style="border-radius:25px; font-size:12px">{{form.errors}}</div>
+                                            {% endif %}
                                             <div class="mb-3">
-                                                <input class="form-control-comment" id="comment" rows="1"
+                                                <input class="form-control-comment" name='text' rows="1"
                                                     placeholder="Оставить комментарий"></input>
-                                                <a href="#"><img class="airplane" src={% static "deps/assets/airplane.png" %}></a>
+                                               <a onclick="event.preventDefault(); document.getElementById('commentForm').submit();"><img class="airplane" src="{% static 'deps/assets/airplane.png' %}"></a>
                                                 <a href="#"><img class="airplane" src={% static "deps/assets/heart.png" %} alt=""
                                                         style="margin-left: 100px;"></a>
                                             </div>
@@ -83,44 +86,26 @@
                                                             Комментарии
                                                         </button>
                                                     </h2>
+                                                   
                                                     <div id="flush-collapseOne" class="accordion-collapse collapse "
                                                         data-bs-parent="#accordionFlushExample">
                                                         <div class="accordion-body scrollspy-example" style="height: 250px;" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                                                             {% for comment in comments  %}
                                                             <div class="comment-block">
                                                                 <div class="comment-user">
-                                                                    <p class="login-user">@mr.Sneakers</p>
-                                                                    <p class="comment-date">22ч назад</p>
+                                                                    <p class="login-user">@{{comment.author.username}}</p>
+                                                                    <p class="comment-date">{{comment.created_at}}</p>
                                                                 </div>
-                                                                <p class="comment-text">Лучшая статья за всю мою жизнь
-                                                                    (456 лет).</p>
+                                                                <p class="comment-text">{{comment.text}}</p>
                                                             </div>
-                                                            <div class="comment-block">
-                                                                <div class="comment-user">
-                                                                    <p class="login-user">@xyeglot_pro</p>
-                                                                    <p class="comment-date">4ч назад</p>
-                                                                </div>
-                                                                <p class="comment-text">Вы опечатались, столько люди не
-                                                                    живут.</p>
-                                                            </div>
-                                                            <div class="comment-block">
-                                                                <div class="comment-user">
-                                                                    <p class="login-user">@xyeglot_pro</p>
-                                                                    <p class="comment-date">4ч назад</p>
-                                                                </div>
-                                                                <p class="comment-text">Вы опечатались, столько люди не
-                                                                    живут Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, possimus, ab molestiae nesciunt eveniet fugiat adipisci debitis asperiores ut incidunt aut, nulla cupiditate repudiandae iste aliquam mollitia similique sunt iure exercitationem modi. Ex dignissimos similique dolore voluptas vitae ab quo!</p>
-                                                            </div>
-                                                            <div class="comment-block">
-                                                                <div class="comment-user">
-                                                                    <p class="login-user">@xyeglot_pro</p>
-                                                                    <p class="comment-date">4ч назад</p>
-                                                                </div>
-                                                                <p class="comment-text">Вы опечатались, столько люди не
-                                                                    живут Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, atque hic autem est sunt temporibus, dolores officia voluptates accusantium facilis enim quo, tempore similique corporis! Rem dolor quaerat, ad perferendis in reiciendis natus architecto! Rem velit, laborum incidunt veniam quod aliquam illo alias suscipit enim, molestias fuga est! Necessitatibus sit est aut veniam quasi iure eum, quod placeat sapiente! Iusto consequuntur minus deleniti illo architecto. Repellat laborum eum ducimus soluta excepturi reiciendis velit totam inventore tempore, illo maxime aliquid nobis impedit omnis nesciunt saepe? Quos blanditiis aspernatur ut voluptatum quidem corporis, pariatur architecto inventore maxime labore ullam vitae maiores animi..</p>
-                                                            </div>
-                                                            
+                                                            {% endfor %}
                                                         </div>
+                                                        
                                                     </div>
+
+                                                    
+                                                           
+                                                            
                                                 </div>
                                             </div>
                                         </div>
@@ -132,6 +117,9 @@
 
                     <div class="col-3"></div>
                 </div>
+
+
+
 {% endblock content %}
 
       
