@@ -1,0 +1,412 @@
+.img-container {
+    position: relative;
+    scale: 1;
+    z-index: 1;
+    padding: 3em;
+    padding-bottom: 0;
+    padding-top: 0;
+    height: 100%;
+    align-items: center;
+    /* width: 70%;
+    height: 70%;
+    margin: 0 auto; */
+
+}
+
+.img-container .img-content {
+    transition: ease-in-out 0.7s;
+
+
+
+}
+
+.img-container .img-content img {
+    width: 75%;
+    padding: 10em;
+    padding-bottom: 0;
+    padding-top: 0;
+    animation: myAnim 5s ease 0s infinite normal forwards;
+}
+
+
+
+
+.img-subtitle {
+    color: rgb(122, 122, 122)
+}
+
+.img-container .img-text {
+    position: absolute;
+    bottom: 0;
+}
+
+
+.img-container .img-text .img-title {
+    font: 700 5rem 'Hind Vadodara', sans-serif;
+
+}
+
+.parent-carousel {
+    height: 500px;
+    display: flex;
+}
+
+.carousel-inner {
+    height: 100%;
+    scale: 1;
+}
+
+#carouselExampleAutoplaying {
+    top: x;
+    background-color: rgba(78, 77, 77, 0.5);
+    border-radius: 25px;
+    max-width: 150%;
+    height: 100%;
+    z-index: 2;
+    /* position: absolute; */
+    /* top: 90% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important; */
+}
+
+
+
+
+
+
+
+
+@keyframes myAnim {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.text-slide {
+
+    font: 700 3rem 'Hind Vadodara', sans-serif;
+    color: rgb(122, 122, 122);
+    font-size: 1.2em;
+    padding: 1em;
+
+}
+
+.text-slide p {
+    font: 700 3rem 'Hind Vadodara', sans-serif;
+    color: rgb(231, 229, 229);
+    font-size: 1.2em;
+    padding: 1em;
+    margin: 0;
+}
+
+
+
+
+
+
+/* блок подписки */
+
+.subscriptionContainer {
+
+    background-color: rgba(78, 77, 77, 0.5);
+    ;
+
+    border-radius: 25px;
+    border-width: 0.5px;
+    border-style: solid;
+    border-color: #fff;
+    /* height: 70%; */
+    width: 100%;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding: 2em;
+    color: #fff;
+
+
+}
+
+
+
+.subscribtionContentBox {
+    background-color: #464646;
+}
+
+
+#exampleInputEmail1 {
+    flex-grow: 1;
+    display: inline;
+
+
+    color:#6e6d6d;
+    font: 700 1em 'Hind Vadodara', sans-serif;
+    outline: none !important;
+
+    background-color: transparent !important;
+    border: none !important;
+    padding-left: 1em;
+    width: 75% !important;
+    max-width: 75% !important;
+}
+
+#exampleInputEmail1:focus {
+    outline: none;
+    box-shadow: none !important;
+    /* box-shadow: #fff 0 0 0 0.1rem !important; */
+}
+
+
+
+
+.email-sub-group {
+
+
+    position: relative;
+    align-items: center;
+    color: #000000 !important;
+    border: 1px solid #6e6d6d;
+    border-radius: 25px;
+    background-color: transparent;
+    max-width: 48%;
+    height: 50px;
+
+}
+
+
+
+.follow-us {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font: 700 3rem 'Hind Vadodara', sans-serif;
+    background-color: #6e6d6d;
+    color: rgb(204, 202, 202);
+    font-size: 1.2em;
+    margin: 0;
+    padding: 2em;
+    margin-right: 3em;
+    border-radius: 25px;
+    border: #fff;
+    border-style: solid;
+    border-width: 0.5px;
+}
+
+
+
+
+.follow-us-title {
+    font: 700 2rem 'Hind Vadodara', sans-serif;
+}
+
+
+.email-sub-btn {
+    display: inline;
+    margin-left: -15px;
+    /* Негативный отступ для перекрытия */
+    height: 100%;
+    /* Чтобы кнопка занимала всю высоту поля ввода */
+
+    background-color: #6e6d6d;
+    min-width: 100px;
+    /* position:absolute; */
+
+
+    /* right: 25em; */
+    font: 700 14px 'Hind Vadodara', sans-serif !important;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0;
+
+    border-radius: 25px;
+    border: 0;
+    border-style: solid;
+
+}
+
+.email-sub-btn:hover {
+    background-color: #fff;
+    color: #7a7979;
+    border-color: #fff;
+}
+
+.form-label {
+    color: #fff;
+    font: 700 2rem 'Hind Vadodara', sans-serif;
+}
+
+.form-text {
+    margin-top: 5em;
+
+}
+
+
+.youtube,
+.twitter,
+.inst {
+    color: #fff;
+    font: 700 3rem 'Hind Vadodara', sans-serif;
+    font-size: 1.2em;
+
+    margin-right: 1em;
+
+    width: 20%;
+}
+
+
+/* grid blogs */
+
+
+.grid-blogs {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5em;
+
+    padding-top: 0;
+    margin-bottom: 3em;
+    width: 125%;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    grid-blogs {
+        grid-template-columns: 1fr 1fr;
+        width: 100%
+    }
+
+}
+
+
+
+.grid-blogs .card {
+    background-color: rgba(78, 77, 77, 0.5);
+
+    border-radius: 25px;
+    transition: ease-in-out 0.7s;
+
+    color: #7a7979;
+    
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0em;
+
+
+
+}
+
+
+.grid-blogs .card:hover {
+
+    /* box-shadow: 0px 0px 15px 8px #6a6868; */
+
+}
+
+.grid-blogs .card-base {
+    align-items: center;
+}
+
+
+.grid-blogs .card-body {
+    padding: 1.5em;
+}
+
+
+.grid-blogs .card .card-title {
+    font: 700 2rem 'ROBOTO', sans-serif;
+    color: #fff;
+    font-size: 1.2em;
+    margin: 0;
+
+}
+
+.pagination-container {
+    margin-top: 0 ;
+    height: 20%;
+
+}
+
+
+
+.pagination .page-item .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    color: #fff;
+
+    border-color: #6e6d6d;
+    border-style: solid;
+    border-width: 0.5px;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: 400;
+    text-decoration: none;
+    align-items: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    width: 50px;
+    background-color: #6e6d6d !important;
+}
+
+
+
+.pagination .page-item .selected {
+    background-color: #3d3d3d !important;
+    color: #7a7979;
+
+}
+
+
+.pagination .page-item .page-link:hover {
+    background-color: #fff !important;
+    color: #7a7979;
+    border-color: #fff;
+}
+
+
+
+
+
+@media screen and (max-width:1400px) and (min-width:1200px) {
+
+
+    .grid-blogs {
+
+
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 3em;
+        width: 125%
+    }
+
+    .email-sub-btn {
+        right: 20em;
+
+    }
+    
+    
+
+
+
+
+}
+
+
+
+@media screen and (max-width:1200px) and (min-width:784px) {
+
+
+#exampleInputEmail1 {
+        
+
+    width: 100% !important;
+   
+}
+}

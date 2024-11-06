@@ -1,0 +1,256 @@
+{% extends "includes/base.html" %}
+
+{% load static %}
+{% load posts_tags %}
+
+<!DOCTYPE html>
+
+<html lang="ru">
+
+{% block css %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static "deps/css/bootstrap/bootstrap.min.css" %}">
+
+    
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/common.css" %}" >
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/fonts.css"  %}">
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/Index.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/navbar.css"%}" >
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/carousel.css" %}" >
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/footer.css" %}" >
+    
+
+
+    {% endblock css %}
+    
+
+
+<body>
+    {% block circle %}
+    <div class="img-container">
+        <div class="img-text start-50 top-30 translate-middle-x">
+            <h2 class="img-title">Newsroom</h2>
+            <p class="img-subtitle">Новости и заметки от ведущих веб-инженеров...</p>
+        </div>
+        <div class="img-content">
+            <img src=" {% static "deps/assets/circle.png" %}">
+        </div>
+
+    </div>
+    {% endblock circle %}
+
+
+    {% block content %}
+    
+
+    
+        <div class="container overflow-hidden mt-5 ">
+            <div class="row gy-3  ">
+                <!-- <div class="col-1"></div> -->
+                <div class="col-12 parent-carousel">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                    class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                            </div>
+
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Предыдущий</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Следующий</span>
+                            </button>
+                            {% get_posts_for_carousel as carosel_posts %}
+                            {% for carousel_post in carosel_posts  %}
+                            {% if forloop.first %}
+                            <div class="carousel-item active">
+                                {% else %}
+                                <div class="carousel-item">
+                            {% endif %}
+                            
+
+                                <div class="d-block w-100 ">
+                                    <div class="row">
+                                        <div class="col-lg-6 text-slide">
+                                            
+                                            <h2 class="insightTitle">{{carousel_post.title}}</h2>
+                                            <h3 class="insightSubtitle">
+                                                {{carousel_post.description|truncatechars:140}}
+                                            </h3>
+
+
+                                            <div>
+                                                <a href="{% url "main:post" carousel_post.slug %}" class="carousel-link w-100">
+                                                    <p>Узнать больше>>></p>
+                                                </a>
+                                            </div>
+
+
+                                            <p class="insightDate">{{carousel_post.created_at}}</p>
+
+                                            <h2 align="right">
+                                                <i>{{carosel_post.made_by.username}}</i>
+                                            </h2>
+
+
+                                        </div>
+                                        <div class="col-lg-6 image-parent">
+                                            <img class="insightImage" src={{carousel_post.image.url}}  alt="alt text" />
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <div class="row w-100">
+
+                <div class="col-12">
+
+
+
+
+                    <div class="card subscriptionContainer">
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="card-body">
+                                    <form>
+                                        <div class="con">
+                                            <label for="exampleInputEmail1" class="form-label">Подпишитесь,<br> чтобы
+                                                оставаться в курсе</label>
+
+                                            <div class="email-sub-group position-relative">
+                                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                                    aria-describedby="emailHelp" placeholder="Ваша электронная почта">
+                                                <button type="submit"
+                                                    class="btn btn-primary email-sub-btn ">Отправить</button>
+                                            </div>
+                                            <br>
+                                            <div id="emailHelp" class="form-text">Мы никогда никому не передадим вашу
+                                                электронную почту.
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-3 align-items-center justify-content-evenly">
+                                <div class="follow-us">
+                                    <h3 class="follow-us-title">:)</h3>
+                                    <br>
+                                    <p>Получите последние новости и вдохновение</p>
+                                    <br>
+                                    <a href="#">
+                                        <img class="twitter" src="{%static "deps/assets/twiter.svg" %}" alt="twiter">
+                                    </a>
+                                    <a href="#">
+                                        <img class="inst" src="{%static "deps/assets/inst.svg" %}" alt="inst">
+                                    </a>
+                                    <a href="#">
+                                        <img class="youtube" src="{%static "deps/assets/youtube.svg" %}" alt="youtube">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+        <div class="container-fluid w-100">
+            
+            <div class="container grid-blogs ">
+                {% get_posts as posts %}
+                {% if posts %}
+                    {% for post in posts %}
+                    <div class="card-base">
+                        <a href= {% url "main:post" post.slug%} >
+                            <div class="card" style="width: 18rem;">
+                                {% if post.image %}
+                                    <img src="{{post.image.url}}" style='max-width:100%'class="card-img-top" alt="изображение">
+                                {% else %}
+                                    <img src="{%static "deps/images/Not found image.png" %}" class="card-img-top" alt="изображение">
+                                {% endif %}
+                                <div class="card-body">
+                                    <p class="card-date mb-2">{{ post.created_at }}</p>
+                                    <h5 class="card-title mb-2">{{ post.title }} </h5>
+                                        <p class="card-text">{% if post.bodyline %}{{post.bodyline|truncatechars:400 }}{% else %}{{ post.description|truncatechars:250  }}{% endif %}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                    {% endfor %}
+                {% endif %}
+                        
+                        
+                        
+                    </div>
+                
+
+
+            {% comment %} <nav class='pagination-container' aria-label="Page navigation example">
+                <ul class="pagination justify-content-center w-100 h-100">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link selected" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav> {% endcomment %}
+        </div>
+
+
+
+
+        </div>
+
+        </div>
+
+
+        </div>
+
+        </div>
+
+    
+    {% endblock content %}
+    
+
+    
+</body>
+
+
+</html>

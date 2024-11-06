@@ -1,0 +1,341 @@
+{% extends "includes/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/5.15.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+
+    <title>Блог</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="./css/headroom.css" />
+
+    <link rel="stylesheet" type="text/css" href="./css/Index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="./css/auth.css" />
+    <link rel="stylesheet" type="text/css" href="./css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="./css/profile.css" />
+    <link rel="stylesheet" type="text/css" href="./css/blog.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container overflow-hidden  text-center mt-5 main-nav-bar">
+            <div class="row gy-3">
+                <div class="col-2"></div>
+                <div class="col-8">
+                    <nav class="navbar bg-dark  border-body " data-bs-theme="dark">
+                        <div class="container-fluid ">
+
+                            <ul class="nav justify-content-evenly w-100">
+                                <li class="nav-item brand-title " style=" font-size: 18px;">
+                                    black+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="Index.html">Главная</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="about-us.html">О нас</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="profile.html">Мой блог</a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a class="nav-link" href="auth.html">Войти</a>
+                                </li>
+                            </ul>
+
+                            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                                aria-labelledby="offcanvasNavbarLabel">
+                                <div class="offcanvas-header">
+
+                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="offcanvas-body">
+                                    <ul class="navbar-nav justify-content-start  pe-3">
+                                        <li class="nav-item">
+                                            <a class="nav-link   py-3 active-offset" aria-current="page"
+                                                href="#">Главная</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link  py-3" href="#">О нас</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link  py-3" href="#">В тренде</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link  py-3" href="#">Мой блог</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link  py-3" href="#">Войти</a>
+                                        </li>
+
+
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="col-2"></div>
+            </div>
+
+
+
+
+
+        </div>
+    </header>
+    <main>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2 "></div>
+                <div class="col-8 ">
+                    <div class="card blog-card mb-3 w-100">
+
+                        <div class="row g-0">
+                            <img class="blog-img-background" style="border-right: 2px solid #d8d7d7;"
+                                src="assets/preview2.png">
+                            <div class="col-md-4" style="position: absolute; left: 7.5px; top: 10px;">
+
+                                <img src="assets/preview2.png" class="img-fluid rounded-start blog-img" alt="...">
+                                <h5 class="card-title">Top 5 useless frontend habits</h5>
+                                <p class="author">@mr.Sneakers</p>
+                                <p class="description" style="color: #d8d7d7; padding: 1.5em;">Lorem, ipsum dolor sit
+                                    amet consectetur adipisicing elit.
+                                    Aperiam voluptas, assumenda vel odio suscipit nobis consequuntur est veritatis
+                                    dolore eos? Totam, exercitationem! Rerum magni ratione, consectetur ea libero at
+                                    nam..</p>
+                            </div>
+                            </img>
+
+                            <div class="col-md-8">
+                                <div class="card-body" style="height: 400px; ">
+
+                                    <!-- <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                        Aperiam voluptas, assumenda vel odio suscipit nobis consequuntur est veritatis
+                                        dolore eos? Totam, exercitationem! Rerum magni ratione, consectetur ea libero at
+                                        nam..</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci assumenda illum
+                                        suscipit a doloribus numquam officia sunt ipsa reprehenderit nostrum. Quod
+                                        dolorem sunt corrupti recusandae repellendus at animi, illum ex eveniet deleniti
+                                        culpa nulla reprehenderit quasi aut fugit, a odit est voluptas voluptatem, enim
+                                        nobis iure. Eaque, perferendis eveniet ratione officia laborum obcaecati
+                                        <br><br>
+                                        consectetur velit quo, laudantium, aut sit! Nemo atque quisquam, quam esse
+                                        voluptatibus facilis nobis maxime nihil, ab, mollitia laborum? Ratione
+                                        accusantium laboriosam corrupti nulla. Quaerat excepturi voluptatem eveniet
+                                        cupiditate officia odit porro ex aspernatur rerum, perspiciatis non nulla! Culpa
+                                        dicta, blanditiis magni incidunt consequuntur mollitia architecto sequi pariatur
+                                        quia ex voluptates ducimus quos, maxime, inventore sunt hic ut eaque voluptate
+                                        dolorem omnis sint! Tempora reiciendis perspiciatis ipsum debitis eligendi
+                                        numquam asperiores,<br><br>
+                                        nulla nisi dolores doloremque vero non! Inventore tempore,
+                                        minus libero tempora magni repellat quisquam praesentium, aperiam cupiditate
+                                        quis accusamus nisi aspernatur deserunt dicta placeat dolorum corrupti saepe,
+                                        ipsam molestiae ipsum itaque enim harum quod? Iusto consequuntur et reiciendis
+                                        dolorem, ad autem corrupti aut omnis placeat deserunt ea exercitationem nihil
+                                        unde nulla, delectus fugiat repellendus dicta suscipit ratione. Ab, deserunt
+                                        totam quo et aspernatur minima sint. Accusamus inventore numquam nam in rem enim
+                                        odit esse deserunt dolorum?
+                                        <br>
+                                        <br>
+                                        nulla nisi dolores doloremque vero non! Inventore tempore,
+                                        minus libero tempora magni repellat quisquam praesentium, aperiam cupiditate
+                                        quis accusamus nisi aspernatur deserunt dicta placeat dolorum corrupti saepe,
+                                        ipsam molestiae ipsum itaque enim harum quod? Iusto consequuntur et reiciendis
+                                        dolorem, ad autem corrupti aut omnis placeat deserunt ea exercitationem nihil
+                                        unde nulla, delectus fugiat repellendus dicta suscipit ratione. Ab, deserunt
+                                        totam quo et aspernatur minima sint. Accusamus inventore numquam nam in rem enim
+                                        odit esse deserunt dolorum?
+                                    </p> -->
+
+
+                                    <div data-bs-spy="scroll" data-bs-target="#navbar-example2"
+                                        data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true"
+                                        class="scrollspy-example  p-3 rounded-2" tabindex="0"
+                                        style="height: 400px; overflow-y: scroll; ">
+                                        <h4 id="scrollspyHeading1">Первый заголовок</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe veritatis hic
+                                            ut eum praesentium, veniam accusamus ab nostrum ipsam fuga minima. Debitis,
+                                            sunt unde dolores ducimus illo perferendis fugit quaerat dolorem repellat.
+                                            Perspiciatis rerum beatae dolorum, magni ullam nam consectetur quam sed,
+                                            repellendus qui numquam ipsum. Assumenda accusamus eum, nisi aspernatur
+                                            autem molestiae nam, tempora hic rerum cumque laboriosam iste qui ex labore
+                                            excepturi porro officiis dignissimos id rem blanditiis culpa. Error nulla
+                                            doloremque non deserunt repudiandae, minus atque fuga totam. Veritatis,
+                                            soluta officia sit dignissimos saepe molestiae? Non veritatis commodi
+                                            laboriosam dignissimos sed fugit in, itaque incidunt iure provident?</p>
+                                        <h4 id="scrollspyHeading2">Второй заголовок</h4>
+                                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores laborum
+                                            modi voluptatum fugiat provident. Necessitatibus sint iste maxime omnis sit
+                                            asperiores eos blanditiis placeat, quam cumque debitis libero ratione sunt
+                                            ab? Commodi, sed sunt tempora pariatur quos ad laboriosam incidunt
+                                            distinctio nulla corporis ipsum placeat fuga, rerum velit rem possimus
+                                            sapiente dolorem quasi quisquam perspiciatis eligendi natus eius assumenda!
+                                            Amet omnis voluptatem veritatis accusantium rem facilis, neque sequi
+                                            similique doloremque ab, ullam, sed eos natus magnam magni? Nostrum
+                                            accusamus adipisci impedit ab, ipsa, commodi labore inventore quos quidem
+                                            eos eaque laborum, rem quaerat velit esse repellat nemo? Voluptatem, culpa
+                                            id.</p>
+                                        <h4 id="scrollspyHeading3">Третий заголовок</h4>
+                                        <p>...</p>
+                                        <h4 id="scrollspyHeading4">Четвертый заголовок</h4>
+                                        <p>...</p>
+                                        <h4 id="scrollspyHeading5">Пятый заголовок</h4>
+                                        <p>...</p>
+                                    </div>
+
+
+                                </div>
+                                <div class="comment-container">
+                                    <div class="comment-form">
+                                        <form>
+                                            <div class="mb-3">
+                                                <input class="form-control-comment" id="comment" rows="1"
+                                                    placeholder="Оставить комментарий"></input>
+                                                <a href="#"><img class="airplane" src="assets/airplane.png"></a>
+                                                <a href="#"><img class="airplane" src="assets/heart.png" alt=""
+                                                        style="margin-left: 100px;"></a>
+                                            </div>
+                                        </form>
+
+                                        <div class="comments" id="commentsSection">
+                                            <div class="accordion accordion-flush" id="accordionFlushExample">
+                                                <div class="accordion-item">
+                                                    <h2 class="accordion-header">
+                                                        <button class="accordion-button collapsed" type="button"
+                                                            data-bs-toggle="collapse"
+                                                            data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                                            aria-controls="flush-collapseOne"
+                                                            onclick="toggleComments()">
+                                                            Комментарии
+                                                        </button>
+                                                    </h2>
+                                                    <div id="flush-collapseOne" class="accordion-collapse collapse "
+                                                        data-bs-parent="#accordionFlushExample">
+                                                        <div class="accordion-body scrollspy-example" style="height: 250px;" data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+                                                            <div class="comment-block">
+                                                                <div class="comment-user">
+                                                                    <p class="login-user">@mr.Sneakers</p>
+                                                                    <p class="comment-date">22ч назад</p>
+                                                                </div>
+                                                                <p class="comment-text">Лучшая статья за всю мою жизнь
+                                                                    (456 лет).</p>
+                                                            </div>
+                                                            <div class="comment-block">
+                                                                <div class="comment-user">
+                                                                    <p class="login-user">@xyeglot_pro</p>
+                                                                    <p class="comment-date">4ч назад</p>
+                                                                </div>
+                                                                <p class="comment-text">Вы опечатались, столько люди не
+                                                                    живут.</p>
+                                                            </div>
+                                                            <div class="comment-block">
+                                                                <div class="comment-user">
+                                                                    <p class="login-user">@xyeglot_pro</p>
+                                                                    <p class="comment-date">4ч назад</p>
+                                                                </div>
+                                                                <p class="comment-text">Вы опечатались, столько люди не
+                                                                    живут Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed, possimus, ab molestiae nesciunt eveniet fugiat adipisci debitis asperiores ut incidunt aut, nulla cupiditate repudiandae iste aliquam mollitia similique sunt iure exercitationem modi. Ex dignissimos similique dolore voluptas vitae ab quo!</p>
+                                                            </div>
+                                                            <div class="comment-block">
+                                                                <div class="comment-user">
+                                                                    <p class="login-user">@xyeglot_pro</p>
+                                                                    <p class="comment-date">4ч назад</p>
+                                                                </div>
+                                                                <p class="comment-text">Вы опечатались, столько люди не
+                                                                    живут Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, atque hic autem est sunt temporibus, dolores officia voluptates accusantium facilis enim quo, tempore similique corporis! Rem dolor quaerat, ad perferendis in reiciendis natus architecto! Rem velit, laborum incidunt veniam quod aliquam illo alias suscipit enim, molestias fuga est! Necessitatibus sit est aut veniam quasi iure eum, quod placeat sapiente! Iusto consequuntur minus deleniti illo architecto. Repellat laborum eum ducimus soluta excepturi reiciendis velit totam inventore tempore, illo maxime aliquid nobis impedit omnis nesciunt saepe? Quos blanditiis aspernatur ut voluptatum quidem corporis, pariatur architecto inventore maxime labore ullam vitae maiores animi..</p>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3"></div>
+                </div>
+            </div>
+
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase-logo">Black+</h5>
+                    <br>
+                    <p class="rights-text">
+                        All rights reserved 2024
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="footer-link">vacancy</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">abuse</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">connect us</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Find us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="footer-link">Telegram</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Twitter</a>
+                        </li>
+                        <li>
+                            <a href="#!" class="footer-link">Facebook</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+<script src="jquery/show-scroll-comment.js"></script>
+
+
+</html>

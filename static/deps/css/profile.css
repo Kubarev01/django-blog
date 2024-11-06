@@ -1,0 +1,285 @@
+
+
+.profile-card{
+
+    display: block;
+    padding: 0;
+    margin-top: 5em;
+    margin-inline: 3em;
+    margin-right: 3em;
+    font-size: 1.2em;
+    width: 100%;
+    align-items: center !important;
+    
+    
+    
+}
+
+.profile-card-header{
+    display: block;
+    justify-content: space-between;
+    align-items: center !important ;
+    border: 0px;
+    border-bottom: 1px;
+    border-style: solid;
+    border-color:rgb(122, 122, 122);
+    padding: 0;
+    padding-bottom: 2em;
+    margin: 0;
+    margin-bottom: 2em;
+    /* width:70%; */
+    max-width: 150vh;
+
+    
+}
+
+.profile-card-body{
+    margin-bottom: 3em;
+}
+
+.profile-card-body .plain-text{
+    display: flex;
+    width: 30%;
+    font: 600 1rem 'Hind Vadodara', sans-serif;
+    color:#fff;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.profile-card-body .recent{
+    padding-top: 2em;
+    padding-bottom: 2em;
+    font: 600 2rem 'Hind Vadodara', sans-serif;
+    color:#fff;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1em;
+
+}
+
+.profile{
+    display: flex;
+    width: 1080px;
+    
+    align-items: center ;
+}
+
+
+.profile .dropdown{
+    display: flex !important;
+    width: 30% !important;
+    
+}
+
+.profile .dropdown .dropdown-toggle{
+    background-color:transparent 100% !important;
+    border: none !important;}
+
+.profile .profile-info{
+    display: flex;
+    margin-top: 0.5em;
+}
+
+.profile .add-card{
+    background-color:  rgba(78, 77, 77, 0.5) !important; 
+    
+    height: 100%;
+}
+
+.profile .add-card:hover{
+    
+    background-color: #444444 !important;
+    
+}
+
+.profile .plus{
+    justify-content: center !important;
+    align-items: center !important;
+    
+}
+.grid-blogs .card .card-title{
+    font: 700 2rem 'ROBOTO', sans-serif;
+    color:#fff;
+    font-size: 1.2em;
+    margin: 0;
+    
+}
+
+
+
+
+.profile .spec-text-1{
+    background-color: #181717;
+    border-radius: 25px;
+    height: 20px;
+    width: 90%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.profile .spec-text-2{
+    background-color: #181717;
+    border-radius: 25px;
+    height: 20px;
+    width: 70%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+.profile .spec-image{
+    background-color: #181717;
+    border-radius: 25px;
+    height: 150px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+
+}
+
+.profile .spec-text-3{
+    background-color: #181717;
+    border-radius: 25px;
+    height: 20px;
+    width: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+}
+
+
+.profile .greetings-text h2{
+    padding: 0;
+    margin: 0;
+    font: 700 3rem 'Roboto', sans-serif;
+    color:#fff;
+}
+
+.profile .greetings-text p{
+    color:rgb(122, 122, 122);
+    margin-top:1em ;
+    padding: 0;
+    font: 700 1rem 'Roboto', sans-serif;
+}
+
+
+
+.profile .bg-body-transparent{
+    background-color: transparent !important;
+
+}
+
+
+.profile .form-control{
+    background-color: transparent;
+    color: #fff;
+    border: none !important;
+    width:100%;
+}
+
+.profile .form-control:focus,
+.profile .form-control:active,
+.profile .form-control:hover{
+    border: none !important;
+
+}
+
+.profile .btn-outline-success{
+    color: #fff;
+    border:none !important;
+}
+
+
+.profile .btn-outline-success:hover{
+  
+    border:none !important;
+    background-color: none !important;
+}
+
+.profile .btn-outline-success img:hover{
+
+    border:none !important;
+    background-color: none !important;
+
+}
+
+
+@media screen and (min-width:1270px) {
+    
+    
+    .grid-blogs{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 3em;
+        width:125%
+    }
+    
+    
+    
+    
+        
+    }
+    
+
+@media screen and (max-width:1270px) and (min-width:768px) {
+    
+    
+.grid-blogs{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 2em;
+    width:100%
+}
+
+
+
+
+    
+}
+
+
+@media screen and (max-width:900px) {
+    
+    
+    .grid-blogs{
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2em;
+        width:100%
+    }
+}    
+
+
+
+@media screen and (max-width:767px) {
+    
+    
+    .grid-blogs{
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2em;
+        width:100%
+    }
+
+    .profile .bg-body-transparent{
+        display: block;
+
+    }
+    .profile .greetings-text{
+        display:block;
+        width:120%;
+        margin-bottom: 2em;
+    }
+    .col-6{
+        width:100%
+    }
+    .profile-card-body .plain-text {
+        
+        width:100%
+    }
+
+}    

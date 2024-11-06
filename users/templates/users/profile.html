@@ -1,0 +1,207 @@
+{% extends "includes/base.html" %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+         {% block css %}
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+                crossorigin="anonymous">
+            <link rel="stylesheet" type="text/css"
+                href="https://stackpath.bootstrapcdn.com/font-awesome/5.15.0/css/font-awesome.min.css"
+                integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+                crossorigin="anonymous" />
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        
+           <link rel="stylesheet" type="text/css" href="{% static "deps/css/index.css" %}">
+            <link rel="stylesheet" type="text/css" href="{% static "deps/css/common.css" %}" >
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/fonts.css"  %}">
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/navbar.css"%}" >
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/footer.css" %}" >
+    <link rel="stylesheet" type="text/css" href="{% static "deps/css/profile.css" %}">
+        {% endblock css %}
+
+
+    {% block content %}
+        <div class="container-fluid">
+
+            <div class="row w-100">
+                <!-- <div class="col-2"></div> -->
+                <div class="col-12">
+                    <div class="container-fluid profile mt-5">
+                        <div class="profile-card ">
+                            <div class="container-fluid profile-card-header align-items-center">
+                                <div class="row w-100">
+                                    <div class="col-6 greetings-text">
+                                        <h2>Привет,{{user.username}}</h2>
+                                        <p>Добро пожаловать обратно!</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <nav class="navbar bg-body-transparent">
+                                            <div class="container-fluid">
+                                                <form class="d-flex w-100" role="search">
+                                                    <button class="btn btn-outline-success" type="submit">
+                                                        <img src="{% static "deps/assets/loupe.png" %} " alt="" style="width: 20px">
+                                                    </button>
+                                                    <input class="form-control me-2" type="search" placeholder="Поиск"
+                                                        aria-label="Поиск">
+
+                                                </form>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class=" profile-card-body">
+                                <div class="row ">
+                                    <div class="col-4">
+                                        <p class="recent">Недавнее</p>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="profile-info">
+                                            <div class="row">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-4">
+                                    <div class="col-8 d-flex align-items-center">
+                                        <div class="class-4"></div>
+                                        <p class="plain-text mb-0" style="color: #6D6D6D !important;">Сортировать
+                                            записи:</p>
+                                        <div class="dropdown ms-2">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                Последние
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Высоко оцененные</a></li>
+                                                <li><a class="dropdown-item" href="#">Старые</a></li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="profile-info">
+                                            <div class="row">
+                                                <!-- Здесь может быть ваш контент -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            
+                            <div class="container grid-blogs ">
+                                <a data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <div class="card w-50 add-card">
+                                        <div class="card-header">
+                                            <div class="spec-image" style="display: flex;
+                                            justify-content: center; 
+                                            align-items: center; 
+                                             ">
+                                                <img class="plus" src="{% static "deps/assets/plus.png" %}" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="spec-text-2"></div>
+                                            <div class="spec-text-1"></div>
+                                            <div class="spec-text-3"></div>
+                                            <div class="spec-text-1"></div>
+                                            <div class="spec-text-3"></div>
+                                        </div>
+                                    </div>
+                                </a>
+
+
+
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content  bg-dark">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Заголовок</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label">Текст</label>
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Изображение</label>
+  <input type="image" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+</div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Сохранить</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {% for post in posts  %}
+                                
+                                <div class="card-base">
+                                    <a href={% url "main:post" post.slug%}>
+                                        <div class="card" style="width: 18rem;">
+                                            <img src={{post.image.url}} class="card-img-top" alt="...">
+                                            <div class="card-body">
+                                                <p class="card-date mb-2">{{post.created_at}}</p>
+                                                <h5 class="card-title mb-2">{{post.title}}</h5>
+                                                <p class="card-text">{{post.description}}</p>
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                {% endfor %}
+                              
+
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+
+                    </div>
+
+
+                </div>
+                <!-- <div class="col-2"></div> -->
+            </div>
+        </div>
+        {% endblock content %}
+
+   
+
+<!-- Подключение Bootstrap JS (если еще не подключен) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
